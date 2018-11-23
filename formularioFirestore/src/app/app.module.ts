@@ -9,18 +9,18 @@ import { HomePage } from '../pages/home/home';
 import * as firebase from 'firebase';
 
 const config = {
-  /*apiKey: "AIzaSyDipIomkPWn5SdtfwwlI_X56wwRohqo7SM",
-  authDomain: "crud-5bc68.firebaseapp.com",
-  databaseURL: "https://crud-5bc68.firebaseio.com",
-  projectId: "crud-5bc68",
-  storageBucket: "crud-5bc68.appspot.com",
-  messagingSenderId: "55546537638"*/
-  apiKey: "AIzaSyCkHd0Bk9B-jbCU8gFFPnhBgd7D44FIueM",
-    authDomain: "crudfirestore-c4235.firebaseapp.com",
-    databaseURL: "https://crudfirestore-c4235.firebaseio.com",
-    projectId: "crudfirestore-c4235",
-    storageBucket: "crudfirestore-c4235.appspot.com",
-    messagingSenderId: "73488675039"
+
+
+
+
+
+
+  apiKey: "your api key",
+    authDomain: "",
+    databaseURL: "your db url",
+    projectId: "your project id",
+    storageBucket: "your firebase data",
+    messagingSenderId: "your mi"
 };
 firebase.initializeApp(config);
 
