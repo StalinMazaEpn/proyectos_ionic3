@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>
+            Inicio
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class='mycontent'>
+
+    <div class="iconoUsuario">
+        <h1>Información de Usuario</h1>
+        <!-- <div class="imagenUsuario"><img src="./assets/imgs/usuario/usuario.png" alt="Usuario"></div>-->
+    </div>
+
+    <form [formGroup]="miFormulario" (ngSubmit)="guardarDatos()" novalidate class="disenioForm">
+        <ion-item>
+            <ion-label>
+                <ion-icon name="person"></ion-icon>
+            </ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('nombre').errors && miFormulario.get('nombre').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('nombre').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="mail"></ion-icon>
+            </ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('email').errors && miFormulario.get('email').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('email').hasError('required')">Campo Obligatorio</p>
+            <p color="danger" ion-text *ngIf="miFormulario.get('email').hasError('email')">Ingrese un email valido</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="transgender"></ion-icon>
+            </ion-label>
+            <ion-select formControlName="sexo" name="tipo" required="">
+                <ion-option value="Masculino">Masculino</ion-option>
+                <ion-option value="Femenino">Femenino</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('sexo').errors && miFormulario.get('sexo').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('sexo').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="calendar"></ion-icon>
+            </ion-label>
+            <ion-datetime formControlName="edad" displayFormat="DD/MM/YYYY" name="fecha"></ion-datetime>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('edad').errors && miFormulario.get('edad').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('edad').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="call"></ion-icon>
+            </ion-label>
+            <ion-input formControlName="telefono" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('telefono').errors && miFormulario.get('telefono').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('telefono').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+
+        <button ion-button class="botonEnviar" type="submit" [disabled]="miFormulario.invalid">Guardar</button>
+    </form>
+</ion-content>
