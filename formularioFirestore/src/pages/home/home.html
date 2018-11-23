@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Crud example
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Nombre :</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="modelo.nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Nickname:</ion-label>
+            <ion-textarea type="text" row="10" [(ngModel)]="modelo.nickname"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Edad: </ion-label>
+            <ion-textarea type="text" row="10" [(ngModel)]="modelo.age"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <button type="button" (click)="addMessage()" ion-button full>Submit</button>
+        </ion-item>
+    </ion-list>
+
+    <ion-card>
+        <ion-card-header>
+            Desliza a la izquierda para eliminar o editar
+        </ion-card-header>
+    </ion-card>
+    <ion-list>
+        <ion-item-sliding *ngFor="let usuario of usuarios">
+            <ion-item>
+                <h3>Nombre: {{usuario.nombre}}</h3>
+                <p>Nickname: {{usuario.nickname}}</p>
+                <p>Edad: {{usuario.age}}</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="danger" (click)="deleteMessage(usuario.$key)">
+        <ion-icon name="ios-trash"></ion-icon>
+        delete
+      </button>
+                <button ion-button color="success" (click)="updateMessage(usuario)">
+          <ion-icon name="ios-create"></ion-icon>
+          edit
+        </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+</ion-content>
