@@ -1,2 +1,3 @@
-# proyectos_ionic3
-Repositorio de los proyectos hechos con IONIC 3
+# Proyectos IONIC
+
+Repositorio de los proyectos realizados usando el framework IONIC en su versión 3
