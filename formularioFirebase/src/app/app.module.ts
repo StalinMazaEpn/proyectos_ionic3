@@ -15,12 +15,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCkFf60Lsu-_1QZXU-54bGPRGncxGATpLA",
-    authDomain: "datosstalin.firebaseapp.com",
-    databaseURL: "https://datosstalin.firebaseio.com",
-    projectId: "datosstalin",
-    storageBucket: "datosstalin.appspot.com",
-    messagingSenderId: "440241994183"
+  apiKey: "#",
+    authDomain: "#",
+    databaseURL: "#",
+    projectId: "#",
+    storageBucket: "#",
+    messagingSenderId: "#"
 };
 
 
