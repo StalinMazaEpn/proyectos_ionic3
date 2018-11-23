@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Mi Mapa Google
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Mapa de Google</h1>
+  <sebm-google-map
+    [latitude]="latitud"
+    [longitude]="longitud"
+    [zoom]="4"
+    [streetViewControl]="false"
+    [disableDefaultUI]="true">
+    <sebm-google-map-marker [latitude]="latitud" [longitude]="longitud"></sebm-google-map-marker>
+  </sebm-google-map>
+
+  <footer >
+    <p>Designed by Stalin Maza</p>
+  </footer>
+</ion-content>

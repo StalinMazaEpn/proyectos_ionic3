@@ -1,0 +1,4 @@
+Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key
+
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
+npm install @ionic-native/google-maps --save
