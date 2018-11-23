@@ -1,0 +1,64 @@
+<!--
+  Generated template for the RegistrarProductoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Formulario Producto</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h1 *ngIf="tituloRegistrar" [innerHTML]="tituloRegistrar">Registro de Producto</h1>
+    <form [formGroup]="miFormulario" (ngSubmit)="addProduct()" novalidate class="disenioForm">
+        <ion-item>
+            <ion-label>
+                <ion-icon>Nombre</ion-icon>
+            </ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('nombre').errors && miFormulario.get('nombre').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('nombre').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon>Cantidad</ion-icon>
+            </ion-label>
+            <ion-input formControlName="cantidad" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('cantidad').errors && miFormulario.get('cantidad').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('cantidad').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon>Precio</ion-icon>
+            </ion-label>
+            <ion-input formControlName="precio" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('precio').errors && miFormulario.get('precio').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('precio').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon>Sabor</ion-icon>
+            </ion-label>
+            <ion-select formControlName="sabor" name="tipo" required="">
+                <ion-option value="Durazno">Durazno</ion-option>
+                <ion-option value="Naranjilla">Naranjilla</ion-option>
+                <ion-option value="Citrus">Citrus</ion-option>
+                <ion-option value="Coco">Coco</ion-option>
+                <ion-option value="Manzana">Manzana</ion-option>
+                <ion-option value="Otros">Otros</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item *ngIf="miFormulario.get('sabor').errors && miFormulario.get('sabor').dirty">
+            <p color="danger" ion-text *ngIf="miFormulario.get('sabor').hasError('required')">Campo Obligatorio</p>
+        </ion-item>
+        <button ion-button block class="botonEnviar" type="submit" [disabled]="miFormulario.invalid">Guardar</button>
+    </form>
+</ion-content>
