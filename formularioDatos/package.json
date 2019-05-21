@@ -47,7 +47,7 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-webview": ">=2.2.0",
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
